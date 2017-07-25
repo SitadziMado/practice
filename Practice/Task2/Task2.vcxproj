@@ -141,7 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Matrix.cpp" />
-    <ClCompile Include="Program.cpp" />
+    <ClCompile Include="Program.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Matrix.h" />

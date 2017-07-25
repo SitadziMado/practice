@@ -81,7 +81,7 @@ MATRIX mulmodij(MATRIX dst, MATRIX src, int size, int modulo, int row, int col)
 {
     int i, j, k;
     int sum;
-    static MATRIX result = makematrix(size);
+    MATRIX result = makematrix(size);
 
     i = row;
     const int ioff = i * size;
