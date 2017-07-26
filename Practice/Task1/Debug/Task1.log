@@ -1,73 +1,214 @@
-﻿  Node.cpp
-c:\users\максим\documents\visual studio 2017\projects\practice\practice\task1\node.cpp(19): warning C4018: <: несоответствие типов со знаком и без знака
-h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(840): error C2280: "std::unique_ptr<Node,std::default_delete<_Ty>>::unique_ptr(const std::unique_ptr<_Ty,std::default_delete<_Ty>> &)": предпринята попытка ссылки на удаленную функцию
+﻿  Program.cpp
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(768): error C2338: The C++ Standard forbids containers of const elements because allocator<const T> is ill-formed.
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(984): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::allocator<_Ty>"
           with
           [
-              _Ty=Node
+              _Ty=const Node
           ]
-  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\memory(1857): note:  см. объявление "std::unique_ptr<Node,std::default_delete<_Ty>>::unique_ptr"
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\vector(441): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::_Wrap_alloc<std::allocator<_Ty>>"
           with
           [
-              _Ty=Node
+              _Ty=const Node
           ]
-  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(959): note: см. ссылку на создание экземпляров функции шаблон при компиляции "void std::allocator<_Ty>::construct<_Objty,std::unique_ptr<Node,std::default_delete<Node>>&>(_Objty *,std::unique_ptr<Node,std::default_delete<Node>> &)"
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\vector(493): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::_Vec_base_types<_Ty,_Alloc>"
           with
           [
-              _Ty=std::unique_ptr<Node,std::default_delete<Node>>,
-              _Objty=std::unique_ptr<Node,std::default_delete<Node>>
+              _Ty=const Node,
+              _Alloc=std::allocator<const Node>
           ]
-  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(959): note: см. ссылку на создание экземпляров функции шаблон при компиляции "void std::allocator<_Ty>::construct<_Objty,std::unique_ptr<Node,std::default_delete<Node>>&>(_Objty *,std::unique_ptr<Node,std::default_delete<Node>> &)"
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\vector(701): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>"
           with
           [
-              _Ty=std::unique_ptr<Node,std::default_delete<Node>>,
-              _Objty=std::unique_ptr<Node,std::default_delete<Node>>
+              _Ty=const Node,
+              _Alloc=std::allocator<const Node>
           ]
-  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(1097): note: см. ссылку на создание экземпляров функции шаблон при компиляции "void std::allocator_traits<_Alloc>::construct<_Ty,std::unique_ptr<Node,std::default_delete<Node>>&>(std::allocator<_Ty> &,_Objty *,std::unique_ptr<Node,std::default_delete<Node>> &)"
+  c:\users\максим\documents\visual studio 2017\projects\practice\practice\task1\program.cpp(28): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::vector<const Node,std::allocator<_Ty>>"
           with
           [
-              _Alloc=std::allocator<std::unique_ptr<Node,std::default_delete<Node>>>,
-              _Ty=std::unique_ptr<Node,std::default_delete<Node>>,
-              _Objty=std::unique_ptr<Node,std::default_delete<Node>>
+              _Ty=const Node
           ]
-  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(1096): note: см. ссылку на создание экземпляров функции шаблон при компиляции "void std::allocator_traits<_Alloc>::construct<_Ty,std::unique_ptr<Node,std::default_delete<Node>>&>(std::allocator<_Ty> &,_Objty *,std::unique_ptr<Node,std::default_delete<Node>> &)"
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(798): error C2535: const Node *std::allocator<_Ty>::address(const Node &) noexcept const: функция-член уже определена или объявлена
           with
           [
-              _Alloc=std::allocator<std::unique_ptr<Node,std::default_delete<Node>>>,
-              _Ty=std::unique_ptr<Node,std::default_delete<Node>>,
-              _Objty=std::unique_ptr<Node,std::default_delete<Node>>
+              _Ty=const Node
           ]
-  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\vector(928): note: см. ссылку на создание экземпляров функции шаблон при компиляции "void std::_Wrap_alloc<std::allocator<_Ty>>::construct<_Ty,std::unique_ptr<Node,std::default_delete<Node>>&>(_Ty *,std::unique_ptr<Node,std::default_delete<Node>> &)"
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(792): note:  см. объявление "std::allocator<_Ty>::address"
           with
           [
-              _Ty=std::unique_ptr<Node,std::default_delete<Node>>
+              _Ty=const Node
           ]
-  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\vector(928): note: см. ссылку на создание экземпляров функции шаблон при компиляции "void std::_Wrap_alloc<std::allocator<_Ty>>::construct<_Ty,std::unique_ptr<Node,std::default_delete<Node>>&>(_Ty *,std::unique_ptr<Node,std::default_delete<Node>> &)"
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(1031): error C2535: const Node *std::_Wrap_alloc<std::allocator<_Ty>>::address(const Node &) const: функция-член уже определена или объявлена
           with
           [
-              _Ty=std::unique_ptr<Node,std::default_delete<Node>>
+              _Ty=const Node
           ]
-  c:\users\максим\documents\visual studio 2017\projects\practice\practice\task1\node.cpp(52): note: см. ссылку на создание экземпляров функции шаблон при компиляции "void std::vector<std::unique_ptr<Node,std::default_delete<_Ty>>,std::allocator<std::unique_ptr<_Ty,std::default_delete<_Ty>>>>::emplace_back<std::unique_ptr<_Ty,std::default_delete<_Ty>>&>(std::unique_ptr<_Ty,std::default_delete<_Ty>> &)"
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(1025): note:  см. объявление "std::_Wrap_alloc<std::allocator<_Ty>>::address"
           with
           [
-              _Ty=Node
+              _Ty=const Node
           ]
-  c:\users\максим\documents\visual studio 2017\projects\practice\practice\task1\node.cpp(52): note: см. ссылку на создание экземпляров функции шаблон при компиляции "void std::vector<std::unique_ptr<Node,std::default_delete<_Ty>>,std::allocator<std::unique_ptr<_Ty,std::default_delete<_Ty>>>>::emplace_back<std::unique_ptr<_Ty,std::default_delete<_Ty>>&>(std::unique_ptr<_Ty,std::default_delete<_Ty>> &)"
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(774): error C2528: pointer: недопустимый указатель на ссылку
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(984): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::allocator<_Ty>"
           with
           [
-              _Ty=Node
+              _Ty=const Node &
           ]
-  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\memory(1857): note: "std::unique_ptr<Node,std::default_delete<_Ty>>::unique_ptr(const std::unique_ptr<_Ty,std::default_delete<_Ty>> &)": функция явно удалена
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\deque(711): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::_Wrap_alloc<std::allocator<_Ty>>"
           with
           [
-              _Ty=Node
+              _Ty=const Node &
           ]
-  GameTree.cpp
-h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\memory(2054): error C2664: "Node::Node(const Node &)": невозможно преобразовать аргумент 1 из "Node *" в "const Node &"
-  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\memory(2054): note: Причина: невозможно преобразовать "Node *" в "const Node"
-  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\memory(2054): note: Ни один конструктор не смог принять исходный тип, либо разрешение перегрузки конструктора неоднозначно
-  c:\users\максим\documents\visual studio 2017\projects\practice\practice\task1\gametree.cpp(53): note: см. ссылку на создание экземпляров функции шаблон при компиляции "std::unique_ptr<Node,std::default_delete<_Ty>> std::make_unique<Node,Node*&>(Node *&)"
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\deque(777): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::_Deque_base_types<_Ty,_Alloc>"
           with
           [
-              _Ty=Node
+              _Ty=const Node &,
+              _Alloc=std::allocator<const Node &>
           ]
-  Создание кода...
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\deque(963): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::_Deque_alloc<std::_Deque_base_types<_Ty,_Alloc>>"
+          with
+          [
+              _Ty=const Node &,
+              _Alloc=std::allocator<const Node &>
+          ]
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\stack(22): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::deque<_Ty,std::allocator<_Ty>>"
+          with
+          [
+              _Ty=const Node &
+          ]
+  c:\users\максим\documents\visual studio 2017\projects\practice\practice\task1\program.cpp(29): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::stack<const Node &,std::deque<_Ty,std::allocator<_Ty>>>"
+          with
+          [
+              _Ty=const Node &
+          ]
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(775): error C2528: const_pointer: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(798): error C2535: const Node &(*std::allocator<_Ty>::address(const Node &) noexcept const): функция-член уже определена или объявлена
+          with
+          [
+              _Ty=const Node &
+          ]
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(792): note:  см. объявление "std::allocator<_Ty>::address"
+          with
+          [
+              _Ty=const Node &
+          ]
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(918): error C2528: pointer: недопустимый указатель на ссылку
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(988): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::allocator_traits<_Alloc>"
+          with
+          [
+              _Alloc=std::allocator<const Node &>
+          ]
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(919): error C2528: const_pointer: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(938): error C2528: <template-parameter>: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(944): error C2528: <template-parameter>: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(1031): error C2535: const Node &(*std::_Wrap_alloc<std::allocator<_Ty>>::address(const Node &) const): функция-член уже определена или объявлена
+          with
+          [
+              _Ty=const Node &
+          ]
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(1025): note:  см. объявление "std::_Wrap_alloc<std::allocator<_Ty>>::address"
+          with
+          [
+              _Ty=const Node &
+          ]
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\deque(715): error C2528: <template-parameter>: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(1020): error C2528: <template-parameter>: недопустимый указатель на ссылку
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\deque(715): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::_Wrap_alloc<std::allocator<_Ty>>::rebind<const Node &(*)>"
+          with
+          [
+              _Ty=const Node &
+          ]
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(766): error C2528: <template-parameter>: недопустимый указатель на ссылку
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(984): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::allocator<_Other>"
+          with
+          [
+              _Other=const Node &(*)
+          ]
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\deque(716): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::_Wrap_alloc<std::allocator<_Other>>"
+          with
+          [
+              _Other=const Node &(*)
+          ]
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(806): error C2528: <template-parameter>: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(816): error C2528: <template-parameter>: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(988): error C2528: <template-parameter>: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(913): error C2528: <template-parameter>: недопустимый указатель на ссылку
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(988): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::allocator_traits<_Alloc>"
+          with
+          [
+              _Alloc=std::allocator<const Node &(*)>
+          ]
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(995): error C2528: <template-parameter>: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(996): error C2528: <template-parameter>: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(997): error C2528: <template-parameter>: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(998): error C2528: <template-parameter>: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(1110): error C2528: <template-parameter>: недопустимый указатель на ссылку
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(811): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(159): error C2528: abstract declarator: недопустимый указатель на ссылку
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\deque(718): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::_Is_simple_alloc<std::_Wrap_alloc<std::allocator<_Ty>>>"
+          with
+          [
+              _Ty=const Node &
+          ]
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(159): error C2528: <template-parameter>: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(161): error C2528: abstract declarator: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(161): error C2528: <template-parameter>: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\deque(727): error C2528: <template-parameter>: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(176): error C2528: pointer: недопустимый указатель на ссылку
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\deque(699): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::_Simple_types<_Ty>"
+          with
+          [
+              _Ty=const Node &
+          ]
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\deque(782): note: см. в справочнике сведения о создании экземпляров класса класс шаблон при компиляции "std::_Deque_simple_types<const Node &>"
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\xmemory0(177): error C2528: const_pointer: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\deque(700): error C2528: _Mapptr: недопустимый указатель на ссылку
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\deque(1465): error C2535: void std::deque<_Ty,std::allocator<_Ty>>::push_front(_Ty): функция-член уже определена или объявлена
+          with
+          [
+              _Ty=const Node &
+          ]
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\deque(1146): note:  см. объявление "std::deque<_Ty,std::allocator<_Ty>>::push_front"
+          with
+          [
+              _Ty=const Node &
+          ]
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\deque(1504): error C2535: void std::deque<_Ty,std::allocator<_Ty>>::push_back(_Ty): функция-член уже определена или объявлена
+          with
+          [
+              _Ty=const Node &
+          ]
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\deque(1156): note:  см. объявление "std::deque<_Ty,std::allocator<_Ty>>::push_back"
+          with
+          [
+              _Ty=const Node &
+          ]
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\deque(1559): error C2535: std::_Deque_iterator<std::_Deque_val<std::_Deque_simple_types<const Node &>>> std::deque<_Ty,std::allocator<_Ty>>::insert(std::_Deque_const_iterator<std::_Deque_val<std::_Deque_simple_types<_Ty>>>,_Ty): функция-член уже определена или объявлена
+          with
+          [
+              _Ty=const Node &
+          ]
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\deque(1166): note:  см. объявление "std::deque<_Ty,std::allocator<_Ty>>::insert"
+          with
+          [
+              _Ty=const Node &
+          ]
+h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\stack(116): error C2535: void std::stack<const Node &,std::deque<_Ty,std::allocator<_Ty>>>::push(const Node &): функция-член уже определена или объявлена
+          with
+          [
+              _Ty=const Node &
+          ]
+  h:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.10.25017\include\stack(84): note:  см. объявление "std::stack<const Node &,std::deque<_Ty,std::allocator<_Ty>>>::push"
+          with
+          [
+              _Ty=const Node &
+          ]
+c:\users\максим\documents\visual studio 2017\projects\practice\practice\task1\program.cpp(40): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\максим\documents\visual studio 2017\projects\practice\practice\task1\program.cpp(49): error C2059: синтаксическая ошибка: const
+c:\users\максим\documents\visual studio 2017\projects\practice\practice\task1\program.cpp(49): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+c:\users\максим\documents\visual studio 2017\projects\practice\practice\task1\program.cpp(49): error C2143: синтаксическая ошибка: отсутствие ";" перед "}"
+c:\users\максим\documents\visual studio 2017\projects\practice\practice\task1\program.cpp(49): error C2059: синтаксическая ошибка: )
+c:\users\максим\documents\visual studio 2017\projects\practice\practice\task1\program.cpp(51): error C2663: std::vector<const Node *,std::allocator<_Ty>>::push_back: для 2 перегрузок нет допустимого преобразования для указателя "this"
+          with
+          [
+              _Ty=const Node *
+          ]
