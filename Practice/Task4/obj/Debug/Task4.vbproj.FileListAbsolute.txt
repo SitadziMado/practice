@@ -1,0 +1,11 @@
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task4\obj\Debug\Task4.vbprojResolveAssemblyReference.cache
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task4\obj\Debug\Task4.Form1.resources
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task4\obj\Debug\Task4.Resources.resources
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task4\obj\Debug\Task4.vbproj.GenerateResource.Cache
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task4\bin\Debug\Task4.exe.config
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task4\bin\Debug\Task4.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task4\bin\Debug\Task4.pdb
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task4\bin\Debug\Task4.xml
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task4\obj\Debug\Task4.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task4\obj\Debug\Task4.xml
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task4\obj\Debug\Task4.pdb
