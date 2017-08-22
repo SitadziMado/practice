@@ -6,3 +6,5 @@ c:\users\максим\documents\visual studio 2017\projects\practice\practice\ta
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(242): note:  см. объявление "freopen"
   Task1.vcxproj -> C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Debug\Task1.exe
   Task1.vcxproj -> C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Debug\Task1.pdb (Partial PDB)
+c:\users\максим\documents\visual studio 2017\projects\practice\practice\task1\program.cpp(101): warning C6031: Возвращаемое значение пропущено: "freopen".
+c:\users\максим\documents\visual studio 2017\projects\practice\practice\task1\program.cpp(102): warning C6031: Возвращаемое значение пропущено: "freopen".

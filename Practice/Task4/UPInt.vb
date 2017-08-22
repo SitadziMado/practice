@@ -76,7 +76,7 @@ Public Class UPUInt
         End If
 
 #If PARALLEL Then
-        If Rhs.mDigits.Count + Lhs.mDigits.Count < PARALLEL_MINIMUN Or Environment.ProcessorCount = 1 Then
+        If Rhs.mDigits.Count + Lhs.mDigits.Count < PARALLEL_MINIMUN OrElse Environment.ProcessorCount = 1 Then
             Return Multiply(Lhs, Rhs)
         Else
             Return ParallelMultiply(Lhs, Rhs)
