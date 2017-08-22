@@ -1,0 +1,10 @@
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task5\bin\Debug\Task5.exe.config
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task5\bin\Debug\Task5.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task5\bin\Debug\Task5.pdb
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task5\bin\Debug\Task5.xml
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task5\obj\Debug\Task5.vbprojResolveAssemblyReference.cache
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task5\obj\Debug\Task5.Resources.resources
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task5\obj\Debug\Task5.vbproj.GenerateResource.Cache
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task5\obj\Debug\Task5.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task5\obj\Debug\Task5.xml
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task5\obj\Debug\Task5.pdb
