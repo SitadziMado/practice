@@ -15,4 +15,15 @@ HammingBuffer::HammingBuffer(const TContainer& rawBuffer)
     while (controlBitCount >= std::log2(controlBitCount + size + 1))
         ++controlBitCount;
 
+    std::size_t increment(1U);
+
+    for (std::size_t i = 0U; i < controlBitCount; ++i)
+    {
+        std::size_t offset(increment - 1);
+
+        for (size_t j = 0; j < size * ElementBitSize; ++j)
+        {
+
+        }
+    }
 }
