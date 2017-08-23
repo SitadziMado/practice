@@ -9,7 +9,9 @@ using std::cout;
 
 int main()
 {
+#ifdef _DEBUG
     test();
+#endif // _DEBUG
 
     ::setlocale(LC_ALL, "Russian");
     cout << "Введите три действительных числа a[1], a[2], a[3] и число M - лимит последовательности: ";
