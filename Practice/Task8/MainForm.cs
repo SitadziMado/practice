@@ -13,6 +13,8 @@ namespace Task8
     public partial class MainForm : Form
     {
         private Graph mGraph = new Graph();
+        private int mPreviouslySelected = -1;
+        private int mSelected = -1;
 
         public MainForm()
         {
@@ -21,7 +23,6 @@ namespace Task8
 
         private void MainForm_Paint(object sender, PaintEventArgs e)
         {
-            mGraph.Draw(e.Graphics);
         }
 
         private void MainForm_MouseClick(object sender, MouseEventArgs e)
@@ -33,8 +34,10 @@ namespace Task8
                 if (selected == -1)
                 {
                     mGraph.AddVertex(e.Location);
+                    selected = mGraph.VertexCount - 1;
                 }
-                else if ((ModifierKeys & Keys.Control) != Keys.None)
+
+                if ((ModifierKeys & Keys.Control) != Keys.None)
                 {
                     mGraph.TryConnectTo(selected);
                 }
@@ -48,7 +51,78 @@ namespace Task8
                 mGraph.RemoveVertex(selected);
             }
 
-            Invalidate();
+            Canvas.Invalidate();
+        }
+
+        private void Canvas_Paint(object sender, PaintEventArgs e)
+        {
+            mGraph.Draw(e.Graphics);
+        }
+
+        private void Canvas_MouseDown(object sender, MouseEventArgs e)
+        {
+            switch (e.Button)
+            {
+                case MouseButtons.Left:
+                case MouseButtons.Right:
+                case MouseButtons.Middle:
+                    mPreviouslySelected = mSelected;
+                    mSelected = mGraph.IndexByCoordinates(e.Location);
+                    if (mSelected != -1)
+                        mGraph.Select(mSelected);
+                    Canvas.Invalidate();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void Canvas_MouseMove(object sender, MouseEventArgs e)
+        {
+            switch (e.Button)
+            {
+                case MouseButtons.Left:
+                    if (mSelected != -1)
+                    {
+                        mGraph.Reposition(mSelected, e.Location);
+                        Canvas.Invalidate();
+                    }
+                    break;
+                case MouseButtons.Right:
+                    break;
+                case MouseButtons.Middle:
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void Canvas_MouseUp(object sender, MouseEventArgs e)
+        {
+            switch (e.Button)
+            {
+                case MouseButtons.Left:
+                    if (mSelected == -1)
+                        mGraph.AddVertex(e.Location);
+                    else if ((ModifierKeys & Keys.Control) != Keys.None)
+                        mGraph.TryConnect(mPreviouslySelected, mSelected);
+
+                    Canvas.Invalidate();
+                    break;
+                case MouseButtons.Right:
+                    if (mSelected != -1)
+                    {
+                        mGraph.RemoveVertex(mSelected);
+                        Canvas.Invalidate();
+                    }
+                    break;
+                case MouseButtons.Middle:
+                    break;
+                default:
+                    break;
+            }
+
+
         }
     }
 }

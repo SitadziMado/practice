@@ -23,7 +23,7 @@ namespace Task8
         {
             // Добавляем новую вершину и координаты для ее визуализации.
             mMatrix.Add(new List<bool>());
-            mCoords.Add(visualCoordinates);
+            mVertices.Add(visualCoordinates);
         }
 
         public void RemoveVertex(int index)
@@ -31,12 +31,16 @@ namespace Task8
             if (!CheckVertexIndex(index))
                 throw new ArgumentOutOfRangeException("Нет вершины с таким индексом.");
 
+            // Удаляем ребра.
+            RemoveEdges(index);
+
             // Удаляем вершину.
             mMatrix.RemoveAt(index);
-            mCoords.RemoveAt(index);
+            mVertices.RemoveAt(index);
             mSelected = -1;
 
-            // ToDo: Удалять ребра.
+            // Устанавливаем флаг для перекэширования.
+            mCacheFlag = true;
         }
 
         public void Connect(int firstIndex, int secondIndex)
@@ -82,7 +86,20 @@ namespace Task8
             }
         }
 
-        public void Disconnect(int edgeIndex)
+        public bool TryConnect(int firstIndex, int secondIndex)
+        {
+            if (mSelected != -1)
+            {
+                Connect(firstIndex, secondIndex);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void RemoveEdge(int edgeIndex)
         {
             if (!CheckEdgeIndex(edgeIndex))
                 throw new ArgumentOutOfRangeException("Нет ребра с таким индексом.");
@@ -113,10 +130,10 @@ namespace Task8
 
         public int IndexByCoordinates(PointF coord)
         {
-            for (int i = 0; i < mCoords.Count; ++i)
+            for (int i = 0; i < mVertices.Count; ++i)
             {
-                float x = coord.X - mCoords[i].X;
-                float y = coord.Y - mCoords[i].Y;
+                float x = coord.X - mVertices[i].X;
+                float y = coord.Y - mVertices[i].Y;
 
                 if (x * x + y * y <= VertexSize * VertexSize)
                     return i;
@@ -131,6 +148,14 @@ namespace Task8
                 throw new ArgumentOutOfRangeException("Нет вершины с таким индексом.");
 
             mSelected = index;
+        }
+
+        public void Reposition(int index, PointF location)
+        {
+            if (!CheckVertexIndex(index))
+                throw new ArgumentOutOfRangeException("Нет вершины с таким индексом.");
+
+            mVertices[index] = location;
         }
 
         private bool IsConnected(int firstIndex, int secondIndex)
@@ -171,47 +196,14 @@ namespace Task8
 
         private void DrawEdges(Graphics graphics)
         {
+            Recache();
+
             for (int i = 0; i < mEdgeCount; ++i)
             {
                 int firstIndex = mEdges[i].Item1;
                 int secondIndex = mEdges[i].Item2;
 
-                graphics.DrawLine(Pens.Black, mCoords[firstIndex], mCoords[secondIndex]);
-
-                /*PointF first = new PointF(), second = new PointF();
-                bool firstSet = false;
-                bool secondSet = false;
-
-                for (int j = 0; j < mMatrix.Count; ++j)
-                {
-                    try
-                    {
-                        if (mMatrix[j][i])
-                        {
-                            if (!firstSet)
-                            {
-                                firstSet = true;
-                                first = mCoords[j];
-                            }
-                            else
-                            {
-                                secondSet = true;
-                                second = mCoords[j];
-                                break;
-                            }
-                        }
-                    }
-                    catch (ArgumentOutOfRangeException)
-                    {
-
-                    }
-                }
-
-                if (!secondSet)
-                    graphics.DrawEllipse(Pens.Black, first.X, first.Y, VertexSize, VertexSize);
-                else
-                    graphics.DrawLine(Pens.Black, first, second);
-                */
+                graphics.DrawLine(Pens.Black, mVertices[firstIndex], mVertices[secondIndex]);
             }
         }
 
@@ -220,7 +212,7 @@ namespace Task8
             Font font = new Font("Verdana", VertexSize / 4);
             int index = 1;
 
-            foreach (var vertex in mCoords)
+            foreach (var vertex in mVertices)
             {
                 RectangleF ellipse = new RectangleF(
                     vertex.X - VertexSize / 2,
@@ -235,12 +227,77 @@ namespace Task8
             }
         }
 
+        private void RemoveEdges(int vertexIndex)
+        {
+            if (!CheckVertexIndex(vertexIndex))
+                throw new ArgumentOutOfRangeException("Нет вершины с таким индексом.");
+
+            var vertex = mMatrix[vertexIndex];
+            var edgesToRemove = new Stack<int>();
+
+            for (int i = 0; i < vertex.Count; ++i)
+                if (vertex[i])
+                    edgesToRemove.Push(i);
+
+            while (edgesToRemove.Count > 0)
+                RemoveEdge(edgesToRemove.Pop());
+        }
+
+        private void Recache()
+        {
+            if (mCacheFlag)
+            {
+                mEdges.Clear();
+
+                for (int i = 0; i < mEdgeCount; ++i)
+                {
+                    int first = -1;
+                    int second = -1;
+                    bool firstSet = false;
+                    bool secondSet = false;
+
+                    for (int j = 0; j < mMatrix.Count; ++j)
+                    {
+                        try
+                        {
+                            if (mMatrix[j][i])
+                            {
+                                if (!firstSet)
+                                {
+                                    firstSet = true;
+                                    first = j;
+                                }
+                                else
+                                {
+                                    secondSet = true;
+                                    second = j;
+                                    break;
+                                }
+                            }
+                        }
+                        catch (ArgumentOutOfRangeException)
+                        {
+
+                        }
+                    }
+
+                    mEdges.Add(new Tuple<int, int>(first, second));
+                }
+
+                mCacheFlag = false;
+            }
+        }
+
+        public int VertexCount { get { return mMatrix.Count; } } 
+        public int SelectedIndex { get { return mSelected; } }
+
         private const int VertexSize = 32;
 
         private uint mEdgeCount = 0U;
         private List<List<bool>> mMatrix = new List<List<bool>>();
-        private List<PointF> mCoords = new List<PointF>();
+        private List<PointF> mVertices = new List<PointF>();
         private List<Tuple<int, int>> mEdges = new List<Tuple<int, int>>();
         private int mSelected = -1;
+        private bool mCacheFlag = false;
     }
 }
