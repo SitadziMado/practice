@@ -1,6 +1,6 @@
 ﻿namespace Task8
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -30,14 +30,16 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Name = "Form1";
+            this.DoubleBuffered = true;
+            this.Name = "MainForm";
             this.Text = "Задание 8";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.MainForm_Paint);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseClick);
             this.ResumeLayout(false);
 
         }

@@ -1,0 +1,9 @@
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task8\bin\Debug\Task8.exe.config
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task8\bin\Debug\Task8.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task8\bin\Debug\Task8.pdb
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task8\obj\Debug\Task8.csprojResolveAssemblyReference.cache
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task8\obj\Debug\Task8.MainForm.resources
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task8\obj\Debug\Task8.Properties.Resources.resources
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task8\obj\Debug\Task8.csproj.GenerateResource.Cache
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task8\obj\Debug\Task8.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task8\obj\Debug\Task8.pdb
