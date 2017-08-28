@@ -1,0 +1,6 @@
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task12\bin\Debug\Task12.exe.config
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task12\bin\Debug\Task12.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task12\bin\Debug\Task12.pdb
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task12\obj\Debug\Task12.csprojResolveAssemblyReference.cache
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task12\obj\Debug\Task12.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task12\obj\Debug\Task12.pdb
