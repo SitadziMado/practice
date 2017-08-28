@@ -1,0 +1,6 @@
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task10\bin\Debug\Task10.exe.config
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task10\bin\Debug\Task10.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task10\bin\Debug\Task10.pdb
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task10\obj\Debug\Task10.csprojResolveAssemblyReference.cache
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task10\obj\Debug\Task10.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task10\obj\Debug\Task10.pdb

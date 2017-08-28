@@ -1,0 +1,4 @@
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task9\obj\Debug\Task9.csprojResolveAssemblyReference.cache
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task9\obj\Debug\Task9.MainForm.resources
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task9\obj\Debug\Task9.Properties.Resources.resources
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task9\obj\Debug\Task9.csproj.GenerateResource.Cache

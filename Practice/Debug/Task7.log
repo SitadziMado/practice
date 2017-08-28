@@ -1,0 +1,7 @@
+﻿  stdafx.cpp
+  Task7.cpp
+  HammingBuffer.cpp
+c:\users\максим\documents\visual studio 2017\projects\practice\practice\task7\hammingbuffer.cpp(12): warning C4244: инициализация: преобразование "double" в "::size_t", возможна потеря данных
+  Создание кода...
+  Task7.vcxproj -> C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Debug\Task7.exe
+  Task7.vcxproj -> C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Debug\Task7.pdb (Partial PDB)
