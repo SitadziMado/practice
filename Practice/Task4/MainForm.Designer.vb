@@ -24,13 +24,13 @@ Partial Class MainForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.CancelButton = New System.Windows.Forms.Button()
         Me.ComputeButton = New System.Windows.Forms.Button()
         Me.SourceTextBox = New System.Windows.Forms.TextBox()
         Me.ResultTextBox = New System.Windows.Forms.TextBox()
         Me.ResultLabel = New System.Windows.Forms.Label()
-        Me.ComputeFactorial = New System.ComponentModel.BackgroundWorker()
         Me.ComputeProgress = New System.Windows.Forms.ProgressBar()
-        Me.CancelButton = New System.Windows.Forms.Button()
+        Me.ComputeFactorial = New System.ComponentModel.BackgroundWorker()
         Me.DiagnosticsTimer = New System.Windows.Forms.Timer(Me.components)
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -57,6 +57,18 @@ Partial Class MainForm
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(624, 442)
         Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'CancelButton
+        '
+        Me.CancelButton.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.CancelButton.Enabled = False
+        Me.CancelButton.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.CancelButton.Location = New System.Drawing.Point(3, 409)
+        Me.CancelButton.Name = "CancelButton"
+        Me.CancelButton.Size = New System.Drawing.Size(618, 30)
+        Me.CancelButton.TabIndex = 5
+        Me.CancelButton.Text = "Прервать расчёт"
+        Me.CancelButton.UseVisualStyleBackColor = True
         '
         'ComputeButton
         '
@@ -103,11 +115,6 @@ Partial Class MainForm
         Me.ResultLabel.TabIndex = 3
         Me.ResultLabel.Text = "Результат:"
         '
-        'ComputeFactorial
-        '
-        Me.ComputeFactorial.WorkerReportsProgress = True
-        Me.ComputeFactorial.WorkerSupportsCancellation = True
-        '
         'ComputeProgress
         '
         Me.ComputeProgress.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -116,31 +123,24 @@ Partial Class MainForm
         Me.ComputeProgress.Size = New System.Drawing.Size(618, 30)
         Me.ComputeProgress.TabIndex = 4
         '
-        'CancelButton
+        'ComputeFactorial
         '
-        Me.CancelButton.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.CancelButton.Enabled = False
-        Me.CancelButton.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.CancelButton.Location = New System.Drawing.Point(3, 409)
-        Me.CancelButton.Name = "CancelButton"
-        Me.CancelButton.Size = New System.Drawing.Size(618, 30)
-        Me.CancelButton.TabIndex = 5
-        Me.CancelButton.Text = "Прервать расчёт"
-        Me.CancelButton.UseVisualStyleBackColor = True
+        Me.ComputeFactorial.WorkerReportsProgress = True
+        Me.ComputeFactorial.WorkerSupportsCancellation = True
         '
         'DiagnosticsTimer
         '
         Me.DiagnosticsTimer.Interval = 500
         '
-        'Form1
+        'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(624, 442)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.MinimumSize = New System.Drawing.Size(640, 480)
-        Me.Name = "Form1"
-        Me.Text = "Задание 3: вычисление факториала"
+        Me.Name = "MainForm"
+        Me.Text = "Задание 4: вычисление факториала"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)

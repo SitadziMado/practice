@@ -70,7 +70,7 @@ Partial Class MainForm
         Me.ClientSize = New System.Drawing.Size(572, 390)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Name = "MainForm"
-        Me.Text = "Задание 3"
+        Me.Text = "Задание 3: принадлежность координат фигуре"
         CType(Me.Surface, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()

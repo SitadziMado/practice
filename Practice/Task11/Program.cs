@@ -18,10 +18,13 @@ namespace Task11
 
             Console.WriteLine("Введите массив битов для \"отправки\": ");
 
-            do
+            input = Console.ReadLine();
+
+            while (!ParseBinaryArray(input))
             {
+                Console.WriteLine("Введите массив, состоящий только из `0` и `1`.");
                 input = Console.ReadLine();
-            } while (!ParseBinaryArray(input));
+            }
 
             Console.WriteLine("Сгенерированные \"помехи\" (вероятность ошибки: {0}%): ", (int)(NoiseChance * 100.0));
 
@@ -30,6 +33,8 @@ namespace Task11
 
             Console.WriteLine("\nВосстановленный (по возможности) результат: ");
             Print(Decoder.Decode(noiseData));
+
+            Console.ReadKey();
         }
 
         private static bool ParseBinaryArray(string data)
