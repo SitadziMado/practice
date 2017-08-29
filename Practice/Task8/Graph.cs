@@ -130,16 +130,18 @@ namespace Task8
 
         public int IndexByCoordinates(PointF coord)
         {
+            int selected = -1;
+
             for (int i = 0; i < mVertices.Count; ++i)
             {
                 float x = coord.X - mVertices[i].X;
                 float y = coord.Y - mVertices[i].Y;
 
                 if (x * x + y * y <= VertexSize * VertexSize)
-                    return i;
+                    selected = i;
             }
 
-            return -1;
+            return selected;
         }
 
         public void Select(int index)
@@ -156,6 +158,16 @@ namespace Task8
                 throw new ArgumentOutOfRangeException("Нет вершины с таким индексом.");
 
             mVertices[index] = location;
+        }
+
+        public void Offset(int index, PointF offset)
+        {
+            if (!CheckVertexIndex(index))
+                throw new ArgumentOutOfRangeException("Нет вершины с таким индексом.");
+
+            var pt = new PointF(mVertices[index].X + offset.X, mVertices[index].Y + offset.Y);
+
+            mVertices[index] = pt;
         }
 
         private bool IsConnected(int firstIndex, int secondIndex)
@@ -209,21 +221,21 @@ namespace Task8
 
         private void DrawVertices(Graphics graphics)
         {
-            Font font = new Font("Verdana", VertexSize / 4);
+            Font font = new Font("Verdana", VertexSize / 2);
             int index = 1;
 
             foreach (var vertex in mVertices)
             {
                 RectangleF ellipse = new RectangleF(
-                    vertex.X - VertexSize / 2,
-                    vertex.Y - VertexSize / 2,
-                    VertexSize,
-                    VertexSize
+                    vertex.X - VertexSize,
+                    vertex.Y - VertexSize,
+                    2.0f * VertexSize,
+                    2.0f * VertexSize
                 );
 
                 graphics.FillEllipse(((index - 1) == mSelected) ? (Brushes.Aquamarine) : (Brushes.LightSeaGreen), ellipse);
                 graphics.DrawEllipse(Pens.Black, ellipse);
-                graphics.DrawString((index++).ToString(), font, Brushes.Black, vertex.X - VertexSize / 4 + 3, vertex.Y - VertexSize / 4 + 1);
+                graphics.DrawString((index++).ToString(), font, Brushes.Black, vertex.X - VertexSize / 4, vertex.Y - VertexSize / 4 - 2);
             }
         }
 
@@ -291,7 +303,7 @@ namespace Task8
         public int VertexCount { get { return mMatrix.Count; } } 
         public int SelectedIndex { get { return mSelected; } }
 
-        private const int VertexSize = 32;
+        private const int VertexSize = 16;
 
         private uint mEdgeCount = 0U;
         private List<List<bool>> mMatrix = new List<List<bool>>();

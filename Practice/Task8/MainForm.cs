@@ -15,6 +15,7 @@ namespace Task8
         private Graph mGraph = new Graph();
         private int mPreviouslySelected = -1;
         private int mSelected = -1;
+        private Point mTouchLocation;
 
         public MainForm()
         {
@@ -66,6 +67,7 @@ namespace Task8
                 case MouseButtons.Left:
                 case MouseButtons.Right:
                 case MouseButtons.Middle:
+                    mTouchLocation = e.Location;
                     mPreviouslySelected = mSelected;
                     mSelected = mGraph.IndexByCoordinates(e.Location);
                     if (mSelected != -1)
@@ -84,7 +86,15 @@ namespace Task8
                 case MouseButtons.Left:
                     if (mSelected != -1)
                     {
-                        mGraph.Reposition(mSelected, e.Location);
+                        mGraph.Offset(
+                            mSelected, 
+                            new Point(
+                                e.Location.X - mTouchLocation.X, 
+                                e.Location.Y - mTouchLocation.Y
+                            )
+                        );
+
+                        mTouchLocation = e.Location;
                         Canvas.Invalidate();
                     }
                     break;

@@ -36,7 +36,7 @@ namespace Task12
         private static void SortAndPrintStatistics()
         {
 
-            Console.WriteLine("Были созданы и отсортированы непрерывные целочисленные диапазоны от {0} то {1}.", MinValue, MaxValue);
+            Console.WriteLine("Были созданы и отсортированы целочисленные диапазоны от {0} то {1}.", MinValue, MaxValue);
 
             SortAndPrintTrees();
             SortAndPrintArrays();
