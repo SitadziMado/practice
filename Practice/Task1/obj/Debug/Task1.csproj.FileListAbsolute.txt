@@ -1,0 +1,5 @@
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task1\bin\Debug\Task1.exe.config
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task1\bin\Debug\Task1.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task1\bin\Debug\Task1.pdb
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task1\obj\Debug\Task1.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task1\obj\Debug\Task1.pdb

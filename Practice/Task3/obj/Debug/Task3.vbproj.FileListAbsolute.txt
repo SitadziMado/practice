@@ -9,5 +9,3 @@ C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Ta
 C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task3\obj\Debug\Task3.exe
 C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task3\obj\Debug\Task3.xml
 C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task3\obj\Debug\Task3.pdb
-C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task3\bin\Debug\Task3.exe.CodeAnalysisLog.xml
-C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task3\bin\Debug\Task3.exe.lastcodeanalysissucceeded

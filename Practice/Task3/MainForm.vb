@@ -40,24 +40,35 @@
 
     End Sub
 
-    Private Sub Surface_MouseClick(sender As Object, e As MouseEventArgs) Handles Surface.MouseClick
+    Private Sub CheckCollision(e As Point)
 
-        If e.Button = MouseButtons.Left Then
+        If mPlane.Test(e.X, e.Y) Then
 
-            If mPlane.Test(e.X, e.Y) Then
+            StatusLabel.Text = "Точка принадлежит заштрихованной области."
+            StatusLabel.ForeColor = Color.Green
 
-                StatusLabel.Text = "Точка принадлежит заштрихованной области."
-                StatusLabel.ForeColor = Color.Green
+        Else
 
-            Else
-
-                StatusLabel.Text = "Точка находится вне заштрихованной области."
-                StatusLabel.ForeColor = Color.Red
-
-            End If
+            StatusLabel.Text = "Точка находится вне заштрихованной области."
+            StatusLabel.ForeColor = Color.Red
 
         End If
 
     End Sub
 
+    Private Sub Surface_MouseClick(sender As Object, e As MouseEventArgs) Handles Surface.MouseClick
+
+        If e.Button = MouseButtons.Left Then
+            Call CheckCollision(e.Location)
+        End If
+
+    End Sub
+
+    Private Sub Surface_MouseMove(sender As Object, e As MouseEventArgs) Handles Surface.MouseMove
+
+        If e.Button = MouseButtons.Left Then
+            Call CheckCollision(e.Location)
+        End If
+
+    End Sub
 End Class
