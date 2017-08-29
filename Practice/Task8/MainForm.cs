@@ -134,5 +134,36 @@ namespace Task8
 
 
         }
+
+        private void CountTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            switch (e.KeyChar)
+            {
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                case '\b':
+                    break;
+
+                default:
+                    e.Handled = true;
+                    break;
+            }
+        }
+
+        private void HighlightEmptyButton_Click(object sender, EventArgs e)
+        {
+            if (!mGraph.HighlightEmptyGraph(Int32.Parse(CountTextBox.Text)))
+                MessageBox.Show("Пустой подграф не найден.");
+
+            Canvas.Invalidate();
+        }
     }
 }

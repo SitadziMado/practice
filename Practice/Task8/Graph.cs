@@ -23,7 +23,7 @@ namespace Task8
         {
             // Добавляем новую вершину и координаты для ее визуализации.
             mMatrix.Add(new List<bool>());
-            mVertices.Add(visualCoordinates);
+            mVertices.Add(new Vertex(visualCoordinates));
         }
 
         public void RemoveVertex(int index)
@@ -37,7 +37,7 @@ namespace Task8
             // Удаляем вершину.
             mMatrix.RemoveAt(index);
             mVertices.RemoveAt(index);
-            mSelected = -1;
+            SelectedIndex = -1;
 
             // Устанавливаем флаг для перекэширования.
             mCacheFlag = true;
@@ -75,9 +75,9 @@ namespace Task8
 
         public bool TryConnectTo(int indexTo)
         {
-            if (mSelected != -1)
+            if (SelectedIndex != -1)
             {
-                Connect(mSelected, indexTo);
+                Connect(SelectedIndex, indexTo);
                 return true;
             }
             else
@@ -88,7 +88,7 @@ namespace Task8
 
         public bool TryConnect(int firstIndex, int secondIndex)
         {
-            if (mSelected != -1)
+            if (firstIndex != -1 && secondIndex != -1)
             {
                 Connect(firstIndex, secondIndex);
                 return true;
@@ -134,8 +134,8 @@ namespace Task8
 
             for (int i = 0; i < mVertices.Count; ++i)
             {
-                float x = coord.X - mVertices[i].X;
-                float y = coord.Y - mVertices[i].Y;
+                float x = coord.X - mVertices[i].Location.X;
+                float y = coord.Y - mVertices[i].Location.Y;
 
                 if (x * x + y * y <= VertexSize * VertexSize)
                     selected = i;
@@ -149,7 +149,7 @@ namespace Task8
             if (!CheckVertexIndex(index))
                 throw new ArgumentOutOfRangeException("Нет вершины с таким индексом.");
 
-            mSelected = index;
+            SelectedIndex = index;
         }
 
         public void Reposition(int index, PointF location)
@@ -157,7 +157,7 @@ namespace Task8
             if (!CheckVertexIndex(index))
                 throw new ArgumentOutOfRangeException("Нет вершины с таким индексом.");
 
-            mVertices[index] = location;
+            mVertices[index].Location = location;
         }
 
         public void Offset(int index, PointF offset)
@@ -165,9 +165,36 @@ namespace Task8
             if (!CheckVertexIndex(index))
                 throw new ArgumentOutOfRangeException("Нет вершины с таким индексом.");
 
-            var pt = new PointF(mVertices[index].X + offset.X, mVertices[index].Y + offset.Y);
+            var pt = new PointF(mVertices[index].Location.X + offset.X, mVertices[index].Location.Y + offset.Y);
 
-            mVertices[index] = pt;
+            mVertices[index].Location = pt;
+        }
+
+        public bool HighlightEmptyGraph(int count)
+        {
+            if (count <= 0)
+                throw new ArgumentOutOfRangeException("Количество вершин должно быть натуральным числом.");
+
+            foreach (var v in mVertices)
+                v.Color = Vertex.DefaultColor;
+
+            var queue = new Queue<int>();
+
+            for (int i = 0; i < mMatrix.Count && queue.Count < count; ++i)
+            {
+                if (!HasEdges(i))
+                    queue.Enqueue(i);
+            }
+
+            if (queue.Count == count)
+            {
+                while (queue.Count > 0)
+                    mVertices[queue.Dequeue()].Color = Vertex.HighlightColor;
+
+                return true;
+            }
+
+            return false;
         }
 
         private bool IsConnected(int firstIndex, int secondIndex)
@@ -215,7 +242,7 @@ namespace Task8
                 int firstIndex = mEdges[i].Item1;
                 int secondIndex = mEdges[i].Item2;
 
-                graphics.DrawLine(Pens.Black, mVertices[firstIndex], mVertices[secondIndex]);
+                graphics.DrawLine(Pens.Black, mVertices[firstIndex].Location, mVertices[secondIndex].Location);
             }
         }
 
@@ -227,15 +254,26 @@ namespace Task8
             foreach (var vertex in mVertices)
             {
                 RectangleF ellipse = new RectangleF(
-                    vertex.X - VertexSize,
-                    vertex.Y - VertexSize,
+                    vertex.Location.X - VertexSize,
+                    vertex.Location.Y - VertexSize,
                     2.0f * VertexSize,
                     2.0f * VertexSize
                 );
 
-                graphics.FillEllipse(((index - 1) == mSelected) ? (Brushes.Aquamarine) : (Brushes.LightSeaGreen), ellipse);
+                graphics.FillEllipse(
+                    new SolidBrush(vertex.Color),
+                    ellipse
+                );
+
                 graphics.DrawEllipse(Pens.Black, ellipse);
-                graphics.DrawString((index++).ToString(), font, Brushes.Black, vertex.X - VertexSize / 4, vertex.Y - VertexSize / 4 - 2);
+
+                graphics.DrawString(
+                    (index++).ToString(), 
+                    font, 
+                    Brushes.Black, 
+                    vertex.Location.X - VertexSize / 4, 
+                    vertex.Location.Y - VertexSize / 4 - 2
+                );
             }
         }
 
@@ -300,14 +338,64 @@ namespace Task8
             }
         }
 
-        public int VertexCount { get { return mMatrix.Count; } } 
-        public int SelectedIndex { get { return mSelected; } }
+        private bool HasEdges(int index)
+        {
+            var vertex = mMatrix[index];
+            int edge = 0;
+            bool result = false;
+
+            foreach (var v in vertex)
+                if (result |= v)
+                    break;
+
+            return result;
+        }
+
+        private class Vertex
+        {
+            public Vertex(PointF location)
+            {
+                Location = location;
+                Color = DefaultColor;
+            }
+
+            public Vertex(PointF location, Color color)
+            {
+                Location = location;
+                Color = color;
+            }
+
+            public PointF Location { get; set; }
+            public Color Color { get; set; }
+            public static Color DefaultColor => Color.Aquamarine;
+            public static Color HighlightColor => Color.PaleVioletRed;
+            public static Color SelectedColor => Color.ForestGreen;
+        }
+
+        public int VertexCount => mMatrix.Count;
+        public int SelectedIndex
+        {
+            get
+            {
+                return mSelected;
+            }
+            internal set
+            {
+                if (mSelected != -1 && CheckVertexIndex(mSelected))
+                    mVertices[mSelected].Color = Vertex.DefaultColor;
+
+                mSelected = value;
+
+                if (mSelected != -1 && CheckVertexIndex(mSelected))
+                    mVertices[mSelected].Color = Vertex.SelectedColor;
+            }
+        }
 
         private const int VertexSize = 16;
 
         private uint mEdgeCount = 0U;
         private List<List<bool>> mMatrix = new List<List<bool>>();
-        private List<PointF> mVertices = new List<PointF>();
+        private List<Vertex> mVertices = new List<Vertex>();
         private List<Tuple<int, int>> mEdges = new List<Tuple<int, int>>();
         private int mSelected = -1;
         private bool mCacheFlag = false;
