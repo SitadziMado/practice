@@ -39,6 +39,7 @@ namespace Task7
                     select v == '1' ? true : false
                 );
 
+                HammingRichTextBox.Clear();
                 HammingRichTextBox.Text = hb.ToString();
                 Colorize();
             }
@@ -55,7 +56,7 @@ namespace Task7
 
         private void Colorize()
         {
-            int color = 0;
+            int color = 1;
             int factor = FactorMax;
 
             for (int i = 1; i < HammingRichTextBox.TextLength; i <<= 1)
@@ -72,7 +73,7 @@ namespace Task7
 
                 if (++color == ColorMax)
                 {
-                    color = 0;
+                    color = 1;
                     if ((factor >>= 1) == 0)
                         break;
                 }

@@ -82,6 +82,7 @@
             this.RawTextBox.Location = new System.Drawing.Point(3, 39);
             this.RawTextBox.Multiline = true;
             this.RawTextBox.Name = "RawTextBox";
+            this.RawTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.RawTextBox.Size = new System.Drawing.Size(486, 384);
             this.RawTextBox.TabIndex = 0;
             this.RawTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RawTextBox_KeyPress);
@@ -95,6 +96,7 @@
             this.HammingRichTextBox.Location = new System.Drawing.Point(495, 39);
             this.HammingRichTextBox.Name = "HammingRichTextBox";
             this.HammingRichTextBox.ReadOnly = true;
+            this.HammingRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
             this.HammingRichTextBox.Size = new System.Drawing.Size(486, 384);
             this.HammingRichTextBox.TabIndex = 1;
             this.HammingRichTextBox.TabStop = false;
