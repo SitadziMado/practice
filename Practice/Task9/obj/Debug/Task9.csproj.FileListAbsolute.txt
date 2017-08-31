@@ -2,3 +2,8 @@ C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Ta
 C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task9\obj\Debug\Task9.MainForm.resources
 C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task9\obj\Debug\Task9.Properties.Resources.resources
 C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task9\obj\Debug\Task9.csproj.GenerateResource.Cache
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task9\bin\Debug\Task9.exe.config
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task9\bin\Debug\Task9.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task9\bin\Debug\Task9.pdb
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task9\obj\Debug\Task9.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task9\obj\Debug\Task9.pdb

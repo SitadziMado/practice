@@ -141,13 +141,17 @@ namespace Task9
             // Если текущий элемент не нулевой, то проверяем его на соответсвие.
             //
             if (current.Valid)
+            {
                 if (current.Data != value)
                 {
                     ++index;
                     return FindImpl(value, current.Next, ref index);
                 }
+            }
             else
+            {
                 index = null;
+            }
 
             return current;
         }
@@ -212,16 +216,16 @@ namespace Task9
                 return "nil";
             }
 
-            public override Node Previous
-            {
-                get { throw new ListEmptyException("Список пуст"); }
-                internal set { throw new ListEmptyException("Список пуст"); }
-            }
-            /* public override Node Next
+            /* public override Node Previous
             {
                 get { throw new ListEmptyException("Список пуст"); }
                 internal set { throw new ListEmptyException("Список пуст"); }
             } */
+            public override Node Next
+            {
+                get { throw new ListEmptyException("Список пуст"); }
+                internal set { throw new ListEmptyException("Список пуст"); }
+            } 
             public override bool Valid => false;
         }
 
