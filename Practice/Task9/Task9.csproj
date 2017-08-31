@@ -47,7 +47,6 @@
   <ItemGroup>
     <Compile Include="IntList.cs" />
     <Compile Include="ListEmptyException.cs" />
-    <Compile Include="RecursiveList.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
