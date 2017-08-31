@@ -35,7 +35,10 @@ int main()
     const int n = (i + 1);
 
     cout << std::endl << "Значение N: " << n << std::endl;
-    cout << std::endl << "a[N] ==  " << ((cur == m) ? ("истина") : ("ложь")) << std::endl;
+    cout << std::endl << "(a[N] ==  M) : " << ((cur == m) ? ("истина") : ("ложь")) << std::endl;
+
+    char stub;
+    cin >> stub;
 
     return 0;
 }
@@ -46,4 +49,6 @@ void test()
 
     auto e13 = seq[13];
     auto e21 = seq[21];
+    auto re13 = seq.recursiveAt(13);
+    auto re21 = seq.recursiveAt(21);
 }

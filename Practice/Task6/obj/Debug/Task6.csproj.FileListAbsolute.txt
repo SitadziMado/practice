@@ -1,0 +1,6 @@
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task6\bin\Debug\Task6.exe.config
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task6\bin\Debug\Task6.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task6\bin\Debug\Task6.pdb
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task6\obj\Debug\Task6.csprojResolveAssemblyReference.cache
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task6\obj\Debug\Task6.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task6\obj\Debug\Task6.pdb

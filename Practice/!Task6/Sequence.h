@@ -12,7 +12,11 @@ public:
 
     const T& operator[](std::size_t index) const;
 
+    const T& recursiveAt(std::size_t index) const;
+
 private:
+    const T& recursiveAtImpl(std::size_t index) const;
+
     mutable TContainer data_;
 };
 
