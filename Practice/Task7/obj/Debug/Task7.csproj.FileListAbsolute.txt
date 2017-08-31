@@ -1,0 +1,9 @@
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task7\bin\Debug\Task7.exe.config
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task7\bin\Debug\Task7.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task7\bin\Debug\Task7.pdb
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task7\obj\Debug\Task7.csprojResolveAssemblyReference.cache
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task7\obj\Debug\Task7.Properties.Resources.resources
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task7\obj\Debug\Task7.csproj.GenerateResource.Cache
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task7\obj\Debug\Task7.exe
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task7\obj\Debug\Task7.pdb
+C:\Users\Максим\Documents\Visual Studio 2017\Projects\Practice\Practice\Task7\obj\Debug\Task7.MainForm.resources

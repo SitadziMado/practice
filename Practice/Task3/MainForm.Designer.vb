@@ -77,8 +77,7 @@ Partial Class MainForm
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents Surface As PictureBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents StatusLabel As Label
+    Private WithEvents Surface As PictureBox
 End Class

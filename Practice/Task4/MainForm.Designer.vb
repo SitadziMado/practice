@@ -66,7 +66,7 @@ Partial Class MainForm
         Me.CancelButton.Location = New System.Drawing.Point(3, 409)
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.Size = New System.Drawing.Size(618, 30)
-        Me.CancelButton.TabIndex = 5
+        Me.CancelButton.TabIndex = 2
         Me.CancelButton.Text = "Прервать расчёт"
         Me.CancelButton.UseVisualStyleBackColor = True
         '
@@ -77,7 +77,7 @@ Partial Class MainForm
         Me.ComputeButton.Location = New System.Drawing.Point(3, 373)
         Me.ComputeButton.Name = "ComputeButton"
         Me.ComputeButton.Size = New System.Drawing.Size(618, 30)
-        Me.ComputeButton.TabIndex = 0
+        Me.ComputeButton.TabIndex = 1
         Me.ComputeButton.Text = "Вычислить факториал (может занять время)"
         Me.ComputeButton.UseVisualStyleBackColor = True
         '
@@ -90,7 +90,7 @@ Partial Class MainForm
         Me.SourceTextBox.MaxLength = 3
         Me.SourceTextBox.Name = "SourceTextBox"
         Me.SourceTextBox.Size = New System.Drawing.Size(618, 23)
-        Me.SourceTextBox.TabIndex = 1
+        Me.SourceTextBox.TabIndex = 0
         Me.SourceTextBox.Text = "100"
         '
         'ResultTextBox
