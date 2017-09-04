@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Task5.DefaultInserter">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DefaultInserter.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.DiagonalInserter">
+    <Position X="2.75" Y="2.25" Width="1.5" />
+    <Members>
+      <Method Name="Move" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Task5.DiagonalInserter.Direction">
+        <TypeIdentifier>
+          <NewMemberFileName>DiagonalInserter.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DiagonalInserter.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.Inserter">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Inserter.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task5.SquareMatrix">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAggAAEAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SquareMatrix.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

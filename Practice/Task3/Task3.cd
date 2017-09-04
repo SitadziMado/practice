@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Task3.Diamond" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABgAAgAAAQAAAAAAAAAAAABAACAAAAAI=</HashCode>
+      <FileName>Diamond.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="Task3.MainForm">
+    <Position X="4.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAYAgAACAAAACAAAGAAAAGAAAIAAGAACAAAQAAAAA=</HashCode>
+      <FileName>MainForm.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task3.Plane" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.75" />
+    <Members>
+      <Method Name="DrawGrid" Hidden="true" />
+      <Method Name="DrawShapes" Hidden="true" />
+      <Method Name="UnscalePoint" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ACAAICABACAABgAAAAIAAAAAAAAAGAAAAACACAEACCI=</HashCode>
+      <FileName>Plane.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" Collapsed="true" />
+  </Class>
+  <Interface Name="Task3.IDrawable">
+    <Position X="6.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IDrawable.vb</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

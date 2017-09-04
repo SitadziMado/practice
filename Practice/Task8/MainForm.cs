@@ -165,5 +165,18 @@ namespace Task8
 
             Canvas.Invalidate();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+@"Для создания вершины щелкните левой кнопкой по полю.
+Для соединения вершины выделите ее левой кнопкой, зажмите Ctrl, щелкните по другой.
+Для удаления вершины щелкните по ней правой кнопкой
+",
+                "Информация",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
     }
 }

@@ -268,10 +268,10 @@ namespace Task8
                 graphics.DrawEllipse(Pens.Black, ellipse);
 
                 graphics.DrawString(
-                    (index++).ToString(), 
-                    font, 
-                    Brushes.Black, 
-                    vertex.Location.X - VertexSize / 4, 
+                    (index++).ToString(),
+                    font,
+                    Brushes.Black,
+                    vertex.Location.X - VertexSize / 4,
                     vertex.Location.Y - VertexSize / 4 - 2
                 );
             }

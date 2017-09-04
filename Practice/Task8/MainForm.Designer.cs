@@ -98,7 +98,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.Name = "MainForm";
-            this.Text = "Задание 8";
+            this.Text = "Задание 8: нахождение пустого подграфа";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.MainForm_Paint);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.Canvas)).EndInit();

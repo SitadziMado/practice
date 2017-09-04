@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Task7.HammingBuffer" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAABAEEAAAAAQAAAAAAAAEAAACAAAAAAA=</HashCode>
+      <FileName>HammingBuffer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Task7.MainForm">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="AddControlBitsButton" Hidden="true" />
+      <Method Name="AddControlBitsButton_Click" Hidden="true" />
+      <Field Name="ColorBlue" Hidden="true" />
+      <Field Name="ColorGreen" Hidden="true" />
+      <Field Name="ColorMax" Hidden="true" />
+      <Field Name="ColorRed" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="FactorMax" Hidden="true" />
+      <Field Name="HammingRichTextBox" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Method Name="MainForm" Hidden="true" />
+      <Method Name="MainForm_Load" Hidden="true" />
+      <Field Name="RawTextBox" Hidden="true" />
+      <Method Name="RawTextBox_KeyPress" Hidden="true" />
+      <Field Name="tableLayoutPanel1" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QAAAEAAAACAAABAAAAGAEAADAIBAAAAgBAgAAAAAADA=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task7.Utility">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -12,6 +12,9 @@ namespace Task11
         private static List<bool> mData = new List<bool>();
         private static Random mRnd = new Random();
 
+        private const ConsoleColor ErrorColor = ConsoleColor.Red;
+        private const ConsoleColor ValidColor = ConsoleColor.Green;
+
         static void Main(string[] args)
         {
             string input;
@@ -70,7 +73,7 @@ namespace Task11
 
         private static void Print(List<bool> list)
         {
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.ForegroundColor = ValidColor;
 
             for (int i = 0; i < list.Count; ++i)
             {
@@ -78,9 +81,9 @@ namespace Task11
                 bool noise = list[i];
 
                 if (original == noise)
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.ForegroundColor = ValidColor;
                 else
-                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.ForegroundColor = ErrorColor;
 
                 if (noise)
                     Console.Write('1');
@@ -100,9 +103,9 @@ namespace Task11
                 bool firstNoise = list[i + 1];
 
                 if (original == firstNoise)
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.ForegroundColor = ValidColor;
                 else
-                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.ForegroundColor = ErrorColor;
 
                 if (firstNoise)
                     Console.Write('1');
@@ -118,9 +121,9 @@ namespace Task11
                 bool secondNoise = list[i + 2];
 
                 if (original == secondNoise)
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.ForegroundColor = ValidColor;
                 else
-                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.ForegroundColor = ErrorColor;
 
                 if (secondNoise)
                     Console.Write('1');
