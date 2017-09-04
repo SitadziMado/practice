@@ -59,8 +59,8 @@ Public Class Diamond
                 Dim Offset = mHeight / 2
                 Dim AbsValue = -Math.Abs(Coeff * Pt.X - mX) + Offset
 
-                If ((AbsValue + mY) > Pt.Y) And
-                   ((-AbsValue + mY) < Pt.Y) Then
+                If ((AbsValue + mY) >= Pt.Y) And
+                   ((-AbsValue + mY) <= Pt.Y) Then
 
                     Return True
 

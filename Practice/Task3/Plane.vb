@@ -119,7 +119,13 @@ Public Class Plane
 
     End Function
 
-    Private Function UnscalePoint(X As Single, Y As Single) As PointF
+    Public Function UnscalePoint(Pt As PointF) As PointF
+
+        Return UnscalePoint(Pt.X, Pt.Y)
+
+    End Function
+
+    Public Function UnscalePoint(X As Single, Y As Single) As PointF
 
         Dim CX = mWidth * 0.5
         Dim CY = mHeight * 0.5

@@ -44,7 +44,8 @@
 
         If mPlane.Test(e.X, e.Y) Then
 
-            StatusLabel.Text = "Точка принадлежит заштрихованной области."
+            Dim Scaled = mPlane.UnscalePoint(e)
+            StatusLabel.Text = "Точка (" & Scaled.X & "; " & Scaled.Y & ") принадлежит заштрихованной области."
             StatusLabel.ForeColor = Color.Green
 
         Else

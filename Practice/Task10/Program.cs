@@ -26,6 +26,7 @@ namespace Task10
             }
 
             Console.WriteLine("Номер оставшегося человека: {0}.", mList.First());
+            Console.ReadKey();
         }
 
         private static void InputData()
