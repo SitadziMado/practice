@@ -31,13 +31,13 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.ContentTextBox = new System.Windows.Forms.TextBox();
-            this.CreateButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.SizeUpDown = new System.Windows.Forms.NumericUpDown();
-            this.FindButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.RemoveButton = new System.Windows.Forms.Button();
+            this.CreateButton = new System.Windows.Forms.Button();
             this.ValueUpDown = new System.Windows.Forms.NumericUpDown();
+            this.FindButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SizeUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ValueUpDown)).BeginInit();
@@ -94,18 +94,6 @@
             this.ContentTextBox.Size = new System.Drawing.Size(729, 288);
             this.ContentTextBox.TabIndex = 1;
             // 
-            // CreateButton
-            // 
-            this.CreateButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.CreateButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CreateButton.Location = new System.Drawing.Point(3, 315);
-            this.CreateButton.Name = "CreateButton";
-            this.CreateButton.Size = new System.Drawing.Size(517, 30);
-            this.CreateButton.TabIndex = 2;
-            this.CreateButton.Text = "Создать список";
-            this.CreateButton.UseVisualStyleBackColor = true;
-            this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -141,19 +129,6 @@
             0,
             0});
             // 
-            // FindButton
-            // 
-            this.FindButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.FindButton.Enabled = false;
-            this.FindButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FindButton.Location = new System.Drawing.Point(3, 351);
-            this.FindButton.Name = "FindButton";
-            this.FindButton.Size = new System.Drawing.Size(517, 30);
-            this.FindButton.TabIndex = 5;
-            this.FindButton.Text = "Найти элемент";
-            this.FindButton.UseVisualStyleBackColor = true;
-            this.FindButton.Click += new System.EventHandler(this.FindButton_Click);
-            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -179,6 +154,18 @@
             this.RemoveButton.Text = "Удалить элемент";
             this.RemoveButton.UseVisualStyleBackColor = true;
             this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
+            // 
+            // CreateButton
+            // 
+            this.CreateButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.CreateButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CreateButton.Location = new System.Drawing.Point(3, 315);
+            this.CreateButton.Name = "CreateButton";
+            this.CreateButton.Size = new System.Drawing.Size(517, 30);
+            this.CreateButton.TabIndex = 2;
+            this.CreateButton.Text = "Создать список";
+            this.CreateButton.UseVisualStyleBackColor = true;
+            this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
             // 
             // ValueUpDown
             // 
@@ -206,6 +193,19 @@
             0,
             0});
             // 
+            // FindButton
+            // 
+            this.FindButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.FindButton.Enabled = false;
+            this.FindButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FindButton.Location = new System.Drawing.Point(3, 351);
+            this.FindButton.Name = "FindButton";
+            this.FindButton.Size = new System.Drawing.Size(517, 30);
+            this.FindButton.TabIndex = 5;
+            this.FindButton.Text = "Найти элемент";
+            this.FindButton.UseVisualStyleBackColor = true;
+            this.FindButton.Click += new System.EventHandler(this.FindButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,7 +213,7 @@
             this.ClientSize = new System.Drawing.Size(735, 420);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MainForm";
-            this.Text = "Задание 9";
+            this.Text = "Задание 9: создание списка рекурсивным способом";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SizeUpDown)).EndInit();

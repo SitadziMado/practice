@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Task8.Graph">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <Members>
+      <Method Name="CheckEdgeIndex" Hidden="true" />
+      <Method Name="CheckVertexIndex" Hidden="true" />
+      <Method Name="DrawEdges" Hidden="true" />
+      <Method Name="DrawVertices" Hidden="true" />
+      <Method Name="IndexByCoordinates" Hidden="true" />
+      <Method Name="IsConnected" Hidden="true" />
+      <Field Name="mCacheFlag" Hidden="true" />
+      <Field Name="mEdgeCount" Hidden="true" />
+      <Field Name="mEdges" Hidden="true" />
+      <Field Name="mSelected" Hidden="true" />
+      <Field Name="mVertices" Hidden="true" />
+      <Method Name="Offset" Hidden="true" />
+      <Method Name="Recache" Hidden="true" />
+      <Method Name="RemoveEdges" Hidden="true" />
+      <Method Name="Reposition" Hidden="true" />
+      <Method Name="Select" Hidden="true" />
+      <Property Name="SelectedIndex" Hidden="true" />
+      <Method Name="TryConnect" Hidden="true" />
+      <Method Name="TryConnectTo" Hidden="true" />
+      <Property Name="VertexCount" Hidden="true" />
+      <Field Name="VertexSize" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Class Name="Task8.Graph.Vertex">
+        <TypeIdentifier>
+          <NewMemberFileName>Graph.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>YCAEBAADAAAQAgBAABgAAIEBAEIQADAgBIAAUAAAgiA=</HashCode>
+      <FileName>Graph.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
