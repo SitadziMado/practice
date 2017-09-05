@@ -52,7 +52,7 @@ namespace Task10
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine("Требуется число.");
+                    Console.WriteLine("Требуется натуральное число.");
                 }
                 catch (OverflowException)
                 {

@@ -8,22 +8,21 @@ namespace Task12
 {
     class Program
     {
-        private const int Multiplier = 32;
-
-        private const int RawMinValue = -1024;
-        private const int RawMaxValue = -RawMinValue;
-
-        private const int MinValue = RawMinValue * Multiplier;
-        private const int MaxValue = -MinValue;
-
-        private static IEnumerable<int> mRange = from v in Enumerable.Range(RawMinValue, RawMaxValue) where true select v * Multiplier;
-        private static int[] mAscending = mRange.ToArray();
-        private static int[] mDescending = mRange.Reverse().ToArray();
-        private static int[] mScattered = mRange.ToArray();
+        private static IEnumerable<int> mRange;
+        private static int[] mAscending;
+        private static int[] mDescending;
+        private static int[] mScattered;
 
         static void Main(string[] args)
         {
-            SortAndPrintStatistics();
+            int size;
+
+            Console.WriteLine("Введите натуральное число - размер:");
+
+            while (!Int32.TryParse(Console.ReadLine(), out size) && size <= 0)
+                Console.WriteLine("Введите натуральное число.");
+
+            SortAndPrintStatistics(size);
             Console.ReadKey();
         }
 
@@ -33,13 +32,18 @@ namespace Task12
             return array.OrderBy(x => rnd.Next()).ToArray();
         }
 
-        private static void SortAndPrintStatistics()
+        private static void SortAndPrintStatistics(int size)
         {
-
-            Console.WriteLine("Были созданы и отсортированы целочисленные диапазоны от {0} то {1}.", MinValue, MaxValue);
+            mRange = from v in Enumerable.Range(0, size) where true select v;
+            mAscending = mRange.ToArray();
+            mDescending = mRange.Reverse().ToArray();
+            mScattered = mRange.ToArray();
+            
+            Console.WriteLine("Были созданы и отсортированы целочисленные диапазоны от {0} то {1}.", 0, size);
+            Console.WriteLine("Размер каждого из диапазонов: {0}.", mRange.Count());
 
             SortAndPrintTrees();
-            SortAndPrintArrays();
+            SortAndPrintArrays(size);
         }
 
         private static void SortAndPrintTrees()
@@ -75,13 +79,13 @@ namespace Task12
             Console.WriteLine();
         }
 
-        private static void SortAndPrintArrays()
+        private static void SortAndPrintArrays(int size)
         {
-            var ascendingArray = mAscending.CountingSort(MinValue, MaxValue);
+            var ascendingArray = mAscending.CountingSort(0, size);
             var ascendingStat = Utility.LastMemoryAccessCount;
-            var descendingArray = mDescending.CountingSort(MinValue, MaxValue);
+            var descendingArray = mDescending.CountingSort(0, size);
             var descendingStat = Utility.LastMemoryAccessCount;
-            var scatteredArray = mScattered.CountingSort(MinValue, MaxValue);
+            var scatteredArray = mScattered.CountingSort(0, size);
             var scatteredStat = Utility.LastMemoryAccessCount;
             
             Console.WriteLine(

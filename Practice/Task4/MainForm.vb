@@ -89,9 +89,13 @@
 
         ComputeProgress.Value = 100
 
-        ResultTextBox.Text = "Готово! Затраченное время: " & (MsCount / 1000).ToString() & " c" & vbNewLine & vbNewLine &
+        If Result IsNot Nothing Then
+            ResultTextBox.Text = "Готово! Затраченное время: " & (MsCount / 1000).ToString() & " c" & vbNewLine & vbNewLine &
             Result.ToString() &
             If(e.Cancelled, " (прервано)", "")
+        Else
+            ResultTextBox.Text = "Ввод был некорректен"
+        End If
 
         ComputeButton.Enabled = True
         DiagnosticsTimer.Enabled = False

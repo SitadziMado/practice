@@ -13,6 +13,9 @@ namespace Task6
         {
             mData.AddLast(first);
 
+            if (first == 0.0 && second == 0.0 && third == 0.0)
+                return;
+
             if (first < limit)
             {
                 mData.AddLast(second);
@@ -25,14 +28,14 @@ namespace Task6
             }
         }
 
-        private void Construct(double last, double beforeLast, double beforeBeforeLast, double limit)
+        private void Construct(double beforeBeforeLast, double beforeLast, double last, double limit)
         {
-            if (last > limit)
+            if (last >= limit)
                 return;
 
             double current = last * beforeLast + beforeBeforeLast;
             mData.AddLast(current);
-            Construct(current, last, beforeLast, limit);
+            Construct(beforeLast, last, current, limit);
         }
 
         public IEnumerator<double> GetEnumerator()

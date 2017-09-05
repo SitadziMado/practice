@@ -24,14 +24,21 @@ namespace Task6
             var a3 = input[2];
             var m = input[3];
 
-            var sequence = new Sequence(a1, a2, a3, m);
+            if (a1 == 0.0 && a2 == 0.0 && a3 == 0.0 && m > 0.0)
+            {
+                Console.WriteLine("Последовательность сходится, но никогда не превышает предела.");
+                Console.ReadKey();
+                return;
+            }
 
+            var sequence = new Sequence(a1, a2, a3, m);
+            
             Console.WriteLine(sequence);
 
             Console.WriteLine("Значение N: {0}", sequence.Count);
             Console.WriteLine("(a[N] ==  M) : {0}", sequence.Last == m);
 
-            Console.ReadKey();
+             Console.ReadKey();
         }
 
         private static double[] InputSource()

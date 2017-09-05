@@ -25,7 +25,7 @@ namespace Task11
 
             while (!ParseBinaryArray(input))
             {
-                Console.WriteLine("Введите массив, состоящий только из `0` и `1`.");
+                Console.WriteLine("Введите непустую строку, состоящую только из `0` и `1`.");
                 input = Console.ReadLine();
             }
 
@@ -44,6 +44,9 @@ namespace Task11
         {
             mData.Clear();
 
+            if (data.Length == 0)
+                return false;
+
             foreach (var v in data)
             {
                 if (v == '0')
@@ -53,7 +56,7 @@ namespace Task11
                 else
                     return false;
             }
-
+            
             return true;
         }
 

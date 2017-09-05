@@ -160,10 +160,27 @@ namespace Task8
 
         private void HighlightEmptyButton_Click(object sender, EventArgs e)
         {
-            if (!mGraph.HighlightEmptyGraph(Int32.Parse(CountTextBox.Text)))
-                MessageBox.Show("Пустой подграф не найден.");
+            try
+            {
+                if (!mGraph.HighlightEmptyGraph(Int32.Parse(CountTextBox.Text)))
+                    MessageBox.Show(
+                        "Пустой подграф не найден.",
+                        "Ошибка",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation
+                    );
 
-            Canvas.Invalidate();
+                Canvas.Invalidate();
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                MessageBox.Show(
+                    "Размер пустого подграфа должен быть натуральным числом.",
+                    "Ошибка",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation
+                );
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
